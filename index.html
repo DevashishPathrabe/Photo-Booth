@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Booth</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1 style="text-align: center; margin: 0px;">Photo Booth</h1>
+  <div class="photobooth">
+    <canvas class="photo"></canvas>
+    <div class="controls">
+      <div class="radios">
+        <span>Please select your effect:</span>
+        <br />
+        <input type="radio" id="normal" name="filter" value="normal" onClick="handleFilterChange(event)" checked />
+        <label for="normal">Normal</label>
+        <br />
+        <input type="radio" id="red-effect" name="filter" value="red-effect" onClick="handleFilterChange(event)" />
+        <label for="red-effect">Red Effect</label>
+        <br />
+        <input type="radio" id="rgb-split" name="filter" value="rgb-split" onClick="handleFilterChange(event)" />
+        <label for="rgb-split">RGB Split</label>
+        <br />
+        <input type="radio" id="green-screen" name="filter" value="green-screen" onClick="handleFilterChange(event)" />
+        <label for="green-screen">Green Screen</label>
+      </div>
+      <div class="rgb">
+        <label for="rmin">Red Min:</label>
+        <input type="range" min=0 max=255 name="rmin">
+        <label for="rmax">Red Max:</label>
+        <input type="range" min=0 max=255 name="rmax">
+        <br>
+        <label for="gmin">Green Min:</label>
+        <input type="range" min=0 max=255 name="gmin">
+        <label for="gmax">Green Max:</label>
+        <input type="range" min=0 max=255 name="gmax">
+        <br>
+        <label for="bmin">Blue Min:</label>
+        <input type="range" min=0 max=255 name="bmin">
+        <label for="bmax">Blue Max:</label>
+        <input type="range" min=0 max=255 name="bmax">
+      </div>
+      <button onClick="takePhoto()" style="padding: 5px; margin: 20px 0 0 0">Take Photo</button>
+    </div>
+    <video class="player" hidden></video>
+  </div>
+  <div class="strip"></div>
+  <audio class="snap" src="./snap.mp3" hidden></audio>
+  <script src="./scripts.js"></script>
+
+</body>
+</html>
