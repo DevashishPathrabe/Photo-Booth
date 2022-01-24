@@ -1,0 +1,66 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+html {
+	background: white;
+	font-family: cursive;
+}
+
+.photobooth {
+	background: white;
+	max-width: 150rem;
+	margin: 2rem auto;
+	border-radius: 2px;
+	display: flex;
+}
+
+/*clearfix*/
+.photobooth:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.photo {
+	width: 50%;
+	float: none;
+}
+
+.player {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 200px;
+}
+
+.controls {
+	margin: 0 0 0 1rem;
+}
+
+.rgb {
+	display: none;
+	margin: 0 0 0 1.7rem;
+}
+
+/*
+  Strip!
+*/
+
+.strip {
+	padding: 0 0 0 0;
+}
+
+.strip img {
+	width: 100px;
+	overflow-x: scroll;
+	padding: 0.8rem 0.8rem 2.5rem 0.8rem;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	background: white;
+}
